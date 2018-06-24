@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Login com o Spring Boot</title>
+	</head>
+	<body>
+		<h1>Login</h1>
+		Usu&aacute;rio: <input>
+		Senha: <input>
+		
+		<button>Login</button>
+		</br>
+		</br>
+		</br>
+		</br>
+		TESTE LISTANDO CLIENTES
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Nome</th>
+					<th>E-mail</th>
+				</tr>
+			</thead>
+		    <tbody>
+				<tr th:each="cliente: ${clientes}">
+					<td th:text="${cliente.id}"></td>
+					<td th:text="${cliente.nome}"></td>
+					<td th:text="${cliente.email}"></td>
+				</tr>
+		    </tbody>
+	  </table>
+	</body>
+</html>
