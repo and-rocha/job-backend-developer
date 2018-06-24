@@ -28,6 +28,7 @@ Como você pode ver, nosso maior desafio está na manutenção e otimização de
 
 1) Imagine que hoje tenhamos um sistema de login e perfis de usuários. O sistema conta com mais de 10 milhões de usuários, sendo que temos um acesso concorrente de cerca de 5 mil usuários. Hoje a tela inicial do sistema se encontra muito lenta. Nessa tela é feita uma consulta no banco de dados para pegar as informações do usuário e exibi-las de forma personalizada. Quando há um pico de logins simultâneos, o carregamento desta tela fica demasiadamente lento. Na sua visão, como poderíamos iniciar a busca pelo problema, e que tipo de melhoria poderia ser feita?
 
+## Resposta
   R.: Primeiramente existe uma sequencia de abordagens que devem ser seguidas até chegar ao problema real.
 A primeira abordagem é verificar como as tabelas estão normalizadas, o ideal é que exista no máximo 3 tabelas, sendo que uma servirá como relacionamento.
 As tabelas serão as seguintes: LOGIN onde conterá o usuario e seu id, PROFILE e uma tabela de ligação N para N, pois dependendo do sistema o mesmo usuário poderá ter perfis diferentes.
